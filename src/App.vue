@@ -1,5 +1,12 @@
 
-
+<!-- 
+    Lavorare sezione per sezione, 
+        prima con una struttra base senza perdere troppo tempo con i settagli solo HTML e CSS
+    Una volta completato il leyout senza dinamicita iniziamo con Js 
+         - Popolare le voci di menù di PageHeader e PageFooter dinamicamente, tramite delle props, creando una struttura dati idonea.
+    Una volta assicuranti che tutto funziona procediamo sezione per seszione e aggiungiamo CSS
+        e facciamo refactieing 
+ -->
 <script>
 import Header from './components/Header.vue';
 import Main from './components/Main.vue';
