@@ -112,6 +112,7 @@ export default {
         max-width: 400px;   
         padding: 20px, 20px, 20px;   
         padding-bottom: 80px;
+        padding-left: 30px;
 
     }
 }
@@ -138,6 +139,7 @@ export default {
 //  MIAN TWO 
 .wrapper-main-two{
     position: relative;
+    height: 600px;
 }
 #main-two{
     max-width: 400px;
