@@ -123,6 +123,7 @@ ul{
     display: flex;
     width: 300px;
     padding-top: 100px;
+    padding-bottom: 110px;
     color: white;
     .my-col{
 

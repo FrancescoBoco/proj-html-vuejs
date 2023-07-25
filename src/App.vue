@@ -43,4 +43,9 @@ export default {
 
 <style lang="scss" >
 @use "./assets/scss/main.scss";
+ *{
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Kablammo', cursive;
+  font-family: 'Montserrat', sans-serif;
+ }
 </style>
