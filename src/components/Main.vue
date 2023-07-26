@@ -19,11 +19,17 @@ export default {
             <h2>
                 OUR CONSULTANTS CAN HELP YOU
             </h2>
+            <div class="line">
+                        
+            </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col-6">
+            <span>
+                <i class="fa-solid fa-chart-line"></i>
+            </span>
             <h3>
                 STATISTICAL CONSULTING
             </h3>
@@ -33,6 +39,9 @@ export default {
         </div>
 
         <div class="col-6">
+            <span>
+                <i class="fa-solid fa-bullhorn"></i>
+            </span>
             <h3>
                 DIGITAL CONSULTING
             </h3>
@@ -42,6 +51,9 @@ export default {
         </div>
 
         <div class="col-6">
+            <span>
+                <i class="fa-solid fa-wallet"></i>
+            </span>
             <h3>
                 BANKING CONSUTLTING 
             </h3>
@@ -51,6 +63,9 @@ export default {
         </div>
 
         <div class="col-6">
+            <span>
+                <i class="fa-solid fa-bullseye"></i>
+            </span>
             <h3>
                 ENTERPRISE CONSUTLTING 
             </h3>
@@ -69,6 +84,9 @@ export default {
      <!--  FINE Div utilizzati solo per bg  -->
 <div class="wrapper-main-two">
     <div id="main-two">
+        <div class="line">
+                        
+        </div>
         <h3>
             ABOUT US
         </h3>
@@ -98,7 +116,11 @@ export default {
 <div id="main-three">
     <div class="container">
         <div class="row">
+            
             <div class="col-12">
+                <div class="line">
+
+                </div>
             PROJECT
             </div>
             <div class="col-7">
@@ -107,7 +129,7 @@ export default {
                 </h2>
             </div>
             <span>
-                icona icona 
+                <i class="fa-solid fa-arrow-left"></i> <i class="fa-solid fa-arrow-right"></i> 
             </span>
         </div>
         <div class="row">
@@ -129,8 +151,13 @@ export default {
     <div class="container">
         <div class="row">
             <div class="col-12">
-                PROJECT
+              
+                TESTIMONIAL
+                <div class="line">
+
+                </div>
             </div>
+            
             <div class="col-7">
 
             </div>
@@ -145,7 +172,7 @@ export default {
  <!-- SEZIONE MAIN 4  -->
 <div id="section-main-four">
     <div class="my-row">
-        <div class="my-col">
+        <div class="my-col card-one">
             <p>
                 When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown plants are noticed when I hear the buzz of the little 
             </p>
@@ -156,7 +183,7 @@ export default {
                 amazon inc 
             </div>
         </div>
-        <div class="my-col">
+        <div class="my-col card-two">
             <p>
                 When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown plants are noticed when I hear the buzz of the little 
             </p>
@@ -167,7 +194,7 @@ export default {
                 amazon inc 
             </div>
         </div>
-        <div class="my-col">
+        <div class="my-col card-one">
             <p>
                 When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown plants are noticed when I hear the buzz of the little 
             </p>
@@ -185,6 +212,9 @@ export default {
     <div class="container">
         <div class="row">
             <div class="col-12">
+                <div class="line">
+
+                </div>
                 BLOG
             </div>
             <div class="col-7">
@@ -254,14 +284,40 @@ export default {
 <style lang="scss" scoped>
 //  MIAN ONE 
 #mian-one{
-    
+    div{
+        position: relative;
+    }
+    span{
+        
+        i{
+        position: absolute;
+        padding: 10px;
+        font-size: 1.4em;
+        border-radius: 50%;
+        color: white;
+        background-color: red;
+        left: -20px;
+        
+    }
+    }
+   
         max-width: 1100px;
         margin: 0 auto;
+        h3{
+        padding-left: 30px;
+        }
    
     h2{
         padding-top: 80px;
         padding-bottom: 80px;
-
+        display: inline-block;
+    }
+    .line{
+        display: inline-block;
+        width:400px;
+        border-bottom: 3px solid #7DFAC2;
+        height: 5px;
+        margin-left: 15px;
     }
 
     p{
@@ -269,7 +325,6 @@ export default {
         padding: 20px, 20px, 20px;   
         padding-bottom: 80px;
         padding-left: 30px;
-
     }
 }
 // BACKGROUND ABSOLUTE 
@@ -305,6 +360,14 @@ export default {
     top:150px;
     > h3{
         font-size: 0.8em;
+        display: inline-block;
+    }
+    .line{
+        display: inline-block;
+        width:40px;
+        border-bottom: 3px solid #7DFAC2;
+        height: 5px;
+        margin-right: 15px;
     }
 }
 // MAIN TWO SECOND SECTION 
@@ -313,7 +376,7 @@ export default {
     width: 100%;
     background-color: #22213B;
     > div{
-    background-color: lightgreen;
+    background-color:#7DFBC3;
     width: 90%;
     height: 100%;
     display: flex;
@@ -348,9 +411,24 @@ export default {
             span{
             position: absolute;
             text-align: end;
+            i{
+                padding: 5px;
+                background-color: rgb(93, 92, 92);
+                &:hover{
+                    background-color: #7DFAC2;
+                }
+            }
             }
             .col-12{
                 padding-bottom: 20px;
+                display: inline-block;
+            }
+            .line{
+                display: inline-block;
+                width:40px;
+                border-bottom: 3px solid #7DFAC2;
+                height: 5px;
+                margin-right: 15px;
             }
         }
        img{
@@ -373,7 +451,14 @@ export default {
             // ????????
             .col-12{
                 padding-bottom: 20px;
-
+                display: inline-block;
+            }
+            .line{
+                display: inline-block;
+                width:40px;
+                border-bottom: 3px solid #7DFAC2;
+                height: 5px;
+                margin-left: 15px;
             }
         }
     }
@@ -386,12 +471,28 @@ export default {
     .my-row{
         width: 80%;
         background-color: white;
-        padding: 50px 0 ;
         display: flex;
 
         .my-col{
             width: calc(100% / 3);
-            padding:0 40px;
+            padding:50px 40px;
+            
+
+        }
+        .card-one{
+            &:hover {
+                background-image:url(../consulting-landing/images/oliver-ragfelt-488196-2.jpg);
+                color: white;
+                background-size: cover;
+
+            }
+        }
+        .card-two{
+            &:hover {
+                background-image:url(../consulting-landing/images/oliver-ragfelt-488196-unsplash.jpg);
+                color: white;
+                background-size: cover;
+            }
         }
     }
 }
@@ -412,9 +513,29 @@ export default {
             > span{
             position: absolute;
             text-align: end;
+            width: 120px;
+            padding: 15px;
+            padding-right: 30px;
+            font-size: 0.8em;
+            color: black;
+            right: 0;
+            background-color: #7DFAC2;
+            &:hover{
+                background-color:#858484;
+                color: white;
+            }
+            
             }
             .col-12{
                 padding-bottom: 20px;
+                display: inline-block;
+            }
+            .line{
+                display: inline-block;
+                width:40px;
+                border-bottom: 3px solid #7DFAC2;
+                height: 5px;
+                margin-right: 15px;
             }
             img{
                 width: 100%;

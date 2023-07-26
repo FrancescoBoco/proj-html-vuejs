@@ -1,7 +1,33 @@
 <script>
 export default {
   data(){
-    return{
+    return{ 
+        links:[
+          {
+            name: 'Home',
+            active: 'true'
+          },
+          {
+            name: 'About',
+            active: 'false'
+          },
+          {
+            name: 'Projects',
+            active: 'false'
+          },
+          {
+            name: 'Services',
+            active: 'false'
+          },
+          {
+            name: 'Blog',
+            active: 'false'
+          },
+          {
+            name: 'Contacts',
+            active: 'false'
+          }
+        ]
     }
   },
   methods: {
@@ -21,43 +47,17 @@ export default {
                 </div>
                 <div class=" col-auto">
                     <ul>
-                        <li>
+                        <li  v-for="(singleLink, i) in links " :key="i"
+                            >
                             <a href="#">
-                                HOME
+                                {{singleLink.name}}
                             </a>
                         </li>
                     </ul>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                HOME
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                HOME
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                HOME
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                HOME
-                            </a>
-                        </li>
-                    </ul>
+                    
                 </div>
                 <div class=" col-auto">
-                    icone icone icone 
+                    <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-linkedin"></i> <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-twitter"></i> 
                 </div>
             </div>
             <div class="row justify-content-between ">
@@ -87,16 +87,26 @@ export default {
             border-bottom: 1px solid rgb(107, 107, 107);
             div{
                 color: white;
-                display: flex;
+                i{
+                    padding: 5px;
+                }
                 img{
                     height: 25px;
+                    
                 }
                 ul{
                     list-style: none;
+                    display: flex;
+
                     li{
                         a{
                         color: white;
                         text-decoration: none;
+                        padding: 10px;
+                        &:hover{
+                            font-weight: bold;
+                            border-bottom: 2px solid white;
+                        }
                         }                        
                     }
                 }

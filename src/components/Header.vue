@@ -8,9 +8,38 @@ export default {
   data(){
     return{
       store,
+      links:[
+          {
+            name: 'Home',
+            active: 'true'
+          },
+          {
+            name: 'About',
+            active: 'false'
+          },
+          {
+            name: 'Projects',
+            active: 'false'
+          },
+          {
+            name: 'Services',
+            active: 'false'
+          },
+          {
+            name: 'Blog',
+            active: 'false'
+          },
+          {
+            name: 'Contacts',
+            active: 'false'
+          }
+        ]
     }
   },
   methods: {
+    linkActive(index){
+        console.log('Attivo', index)
+    }
    
   },
   props: {
@@ -36,27 +65,20 @@ export default {
                 </div>
 
                 <div class="col">
-                        <ul class="d-flex">
-                            <li>
-                                HOME 
+                        <ul class="d-flex" >
+                            <li v-for="(singleLink, i) in links " :key="i" @click="linkActive(i)"
+                            :class="{'active' : i == singleLink}">
+                                {{ singleLink.name }}
                             </li>
-                            <li>
-                                HOME
-                            </li>
-                            <li>
-                                HOME
-                            </li>
-                            <li>
-                                HOME
-                            </li>
-                            <li>
-                                HOME
-                            </li>
+                            
                         </ul>
                 </div>
             </div>
             <div class="my-row ">
                 <div class="my-col">
+                    <div class="line">
+                        
+                    </div>
                     <h3>
                         ALLWAYS THE BEST WAY YOU NEED IT
                     </h3>
@@ -65,10 +87,10 @@ export default {
                     </h1>
                     <div>
                         <button>
-                            Read more
+                            READ MORE
                         </button>
                         <span>
-                            icon 
+                            <i class="fa-solid fa-play"></i> 
                         </span>
                     </div>
                 </div>
@@ -83,6 +105,19 @@ export default {
 
 
 <style lang="scss" scoped>
+button{
+    border: none;
+    background-color: #7DFAC2;
+    color: black;
+    padding: 10px 30px;
+    &:hover{
+        background-color: #40fca7;
+    }
+}
+.active{
+    color:white;
+    font-weight: bold;
+}
 .header-left-bg{
         height: 600px;
         background-color: #22213B;
@@ -116,6 +151,10 @@ ul{
     li{
         padding: 20px;
         color: white;
+        &:hover{
+            font-weight: bold;
+            border-top: 2px solid white;
+        }
     }
 }
 
@@ -126,9 +165,18 @@ ul{
     padding-bottom: 110px;
     color: white;
     .my-col{
+        .line{
+            display: inline-block;
+            width: 35px;
+            border-bottom: 3px solid #7DFAC2;
+            height: 5px;
+            margin-right: 15px;
+
+        }
 
         h3{
             font-size: 0.8em;
+            display: inline-block;
         }
         div{
             padding:10px
@@ -137,7 +185,15 @@ ul{
             font-size: 4em;
         }
         span{
-            padding-left: 10px;
+            margin-left: 30px;
+            padding: 10px 13px;
+            border-radius: 50%;
+            color: #7DFAC2;
+            border: 1px solid white;
+            &:hover{
+                background-color: #40fca7;
+                color: black;
+            }
         }
 
     }
