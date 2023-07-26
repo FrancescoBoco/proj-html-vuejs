@@ -26,6 +26,32 @@ export default {
   data(){
     return{
         store,
+        links:[
+          {
+            name: 'Home',
+            active: 'true'
+          },
+          {
+            name: 'About',
+            active: 'false'
+          },
+          {
+            name: 'Projects',
+            active: 'false'
+          },
+          {
+            name: 'Services',
+            active: 'false'
+          },
+          {
+            name: 'Blog',
+            active: 'false'
+          },
+          {
+            name: 'Contacts',
+            active: 'false'
+          }
+        ]
     }
   },
   methods: {
