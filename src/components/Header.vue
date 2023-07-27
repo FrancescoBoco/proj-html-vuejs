@@ -8,37 +8,13 @@ export default {
   data(){
     return{
       store,
-      links:[
-          {
-            name: 'Home',
-            active: 'true'
-          },
-          {
-            name: 'About',
-            active: 'false'
-          },
-          {
-            name: 'Projects',
-            active: 'false'
-          },
-          {
-            name: 'Services',
-            active: 'false'
-          },
-          {
-            name: 'Blog',
-            active: 'false'
-          },
-          {
-            name: 'Contacts',
-            active: 'false'
-          }
-        ]
+      
+     
     }
   },
   methods: {
     linkActive(index){
-        console.log('Attivo', index)
+        store.activeLink = index
     }
    
   },
@@ -56,7 +32,7 @@ export default {
      <!--  FINE Div utilizzati solo per bg  -->
 
 
-        <div class="container">
+        <div class="container " id="home">
             <div class="row justify-content-between align-items-center">
                 <div class="col left-header p-4">
                 <div>
@@ -66,8 +42,8 @@ export default {
 
                 <div class="col">
                         <ul class="d-flex" >
-                            <li v-for="(singleLink, i) in links " :key="i" @click="linkActive(i)"
-                            :class="{'active' : i == singleLink}">
+                            <li v-for="(singleLink, i) in store.links " :key="i" @click="linkActive(i)"
+                            :class="{'active' : i == store.activeLink}">
                                 {{ singleLink.name }}
                             </li>
                             
@@ -75,7 +51,7 @@ export default {
                 </div>
             </div>
             <div class="my-row ">
-                <div class="my-col">
+                <div class="my-col" >
                     <div class="line">
                         
                     </div>
@@ -117,6 +93,7 @@ button{
 .active{
     color:white;
     font-weight: bold;
+    border-top: 2px solid white;
 }
 .header-left-bg{
         height: 600px;
@@ -131,7 +108,7 @@ button{
         height: 600px;
         background-image: url(../consulting-landing/images/portrait-of-young-architect-woman-on-meeting-KFZCE3A.jpg);
         background-size: cover;
-        width: 1100px;
+        width: 1000px;
         position: absolute;
         right: 0;
         z-index: -1;

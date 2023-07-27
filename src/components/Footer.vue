@@ -1,37 +1,17 @@
 <script>
+import { store } from '../store';
+
 export default {
   data(){
     return{ 
-        links:[
-          {
-            name: 'Home',
-            active: 'true'
-          },
-          {
-            name: 'About',
-            active: 'false'
-          },
-          {
-            name: 'Projects',
-            active: 'false'
-          },
-          {
-            name: 'Services',
-            active: 'false'
-          },
-          {
-            name: 'Blog',
-            active: 'false'
-          },
-          {
-            name: 'Contacts',
-            active: 'false'
-          }
-        ]
+        store,
     }
   },
   methods: {
-
+    linkActive(index){
+        store.activeLink = index
+        
+    }
   },
   props: {
   }
@@ -47,9 +27,10 @@ export default {
                 </div>
                 <div class=" col-auto">
                     <ul>
-                        <li  v-for="(singleLink, i) in links " :key="i"
+                        <li  v-for="(singleLink, i) in store.links " :key="i" @click="linkActive(i)"
+                            :class="{'active' : i == store.activeLink}"
                             >
-                            <a href="#">
+                            <a :href="singleLink.destination">
                                 {{singleLink.name}}
                             </a>
                         </li>
@@ -86,6 +67,11 @@ export default {
             padding: 50px 0;
             border-bottom: 1px solid rgb(107, 107, 107);
             div{
+                .active{
+                    color:white;
+                    font-weight: bold;
+                    border-bottom: 2px solid white;
+                }
                 color: white;
                 i{
                     padding: 5px;

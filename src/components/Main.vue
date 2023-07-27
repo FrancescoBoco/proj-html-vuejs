@@ -14,7 +14,7 @@ export default {
 
 <template>
 <div id="mian-one">
-    <div  class="row">
+    <div  class="row " id="services">
         <div class="col">
             <h2>
                 OUR CONSULTANTS CAN HELP YOU
@@ -25,12 +25,12 @@ export default {
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" >
         <div class="col-6">
             <span>
                 <i class="fa-solid fa-chart-line"></i>
             </span>
-            <h3>
+            <h3 >
                 STATISTICAL CONSULTING
             </h3>
             <p>
@@ -84,7 +84,7 @@ export default {
      <!--  FINE Div utilizzati solo per bg  -->
 <div class="wrapper-main-two">
     <div id="main-two">
-        <div class="line">
+        <div class="line" id="about">
                         
         </div>
         <h3>
@@ -117,10 +117,10 @@ export default {
     <div class="container">
         <div class="row">
             
-            <div class="col-12">
+            <div id="projects" class="col-12">
                 <div class="line">
 
-                </div>
+                </div >
             PROJECT
             </div>
             <div class="col-7">
@@ -150,7 +150,7 @@ export default {
 <div id="main-four">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12" id="contacts">
               
                 TESTIMONIAL
                 <div class="line">
@@ -211,7 +211,7 @@ export default {
 <div id="main-five">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12" id="blog">
                 <div class="line">
 
                 </div>
@@ -331,7 +331,7 @@ export default {
 .header-left-bg{
         height: 600px;
         background-color: #22213B;
-        width: 1000px;
+        width: 900px;
         position: absolute;
         right: 0;
         z-index: -2;
@@ -341,7 +341,7 @@ export default {
         height: 600px;
         background-image: url(../consulting-landing/images/business-people-working-together-on-project-and-5FHSKBL.jpg);
         background-size: cover;
-        width: 1000px;
+        width: 900px;
         position: absolute;
         left: 0;
         z-index: -1;
